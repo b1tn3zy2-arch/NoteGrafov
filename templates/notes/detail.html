@@ -14,5 +14,7 @@
         </div>
     </div>
     <a href="{% url 'note_list' %}" class="btn btn-secondary mt-3">Назад</a>
+    <a href="{% url 'note_update' note.pk %}" class="btn btn-warning mt-3">Редактировать</a>
+    <a href="{% url 'note_delete' note.pk %}" class="btn btn-danger mt-3">Удалить</a>
 </body>
 </html>
