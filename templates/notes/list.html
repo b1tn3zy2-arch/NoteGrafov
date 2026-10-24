@@ -19,6 +19,7 @@
             <div class="card-body">
                 <h5>{{ note.title }}</h5>
                 <p class="mb-1">{{ note.text }}</p>
+                {% for tag in note.tags.all %}<span class="badge bg-secondary">{{ tag.name }}</span> {% endfor %}
                 <small class="text-muted">{{ note.created_at }}</small>
                 <a href="{% url 'note_detail' note.pk %}" class="btn btn-sm btn-info">Открыть</a>
                 <a href="{% url 'note_update' note.pk %}" class="btn btn-sm btn-warning">Редактировать</a>
