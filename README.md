@@ -7,6 +7,7 @@
 - Список всех заметок
 - Создание заметки (заголовок + текст)
 - Просмотр отдельной заметки
+- Редактирование заметки
 - Удаление заметки с подтверждением
 
 ## Технологии
@@ -58,6 +59,7 @@ notes-app/
 │       ├── list.html
 │       ├── create.html
 │       ├── detail.html
+│       ├── edit.html
 │       └── delete.html
 ├── .gitignore
 ├── requirements.txt
@@ -72,3 +74,4 @@ notes-app/
 - `feature/notes-create` — создание заметки
 - `feature/notes-detail` — просмотр заметки
 - `feature/notes-delete` — удаление заметки
+- `feature/notes-edit` — редактирование заметки (дополнительное задание)
