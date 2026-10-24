@@ -16,6 +16,7 @@
                 <p class="mb-1">{{ note.text }}</p>
                 <small class="text-muted">{{ note.created_at }}</small>
                 <a href="{% url 'note_detail' note.pk %}" class="btn btn-sm btn-info">Открыть</a>
+                <a href="{% url 'note_delete' note.pk %}" class="btn btn-sm btn-danger">Удалить</a>
             </div>
         </div>
     {% empty %}
