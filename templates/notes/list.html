@@ -15,6 +15,7 @@
                 <h5>{{ note.title }}</h5>
                 <p class="mb-1">{{ note.text }}</p>
                 <small class="text-muted">{{ note.created_at }}</small>
+                <a href="{% url 'note_detail' note.pk %}" class="btn btn-sm btn-info">Открыть</a>
             </div>
         </div>
     {% empty %}
