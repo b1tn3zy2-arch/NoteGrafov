@@ -30,3 +30,15 @@ def note_delete(request, pk):
         note.delete()
         return redirect('note_list')
     return render(request, 'notes/delete.html', {'note': note})
+
+
+def note_update(request, pk):
+    note = get_object_or_404(Note, pk=pk)
+    if request.method == 'POST':
+        form = NoteForm(request.POST, instance=note)
+        if form.is_valid():
+            form.save()
+            return redirect('note_detail', pk=note.pk)
+    else:
+        form = NoteForm(instance=note)
+    return render(request, 'notes/edit.html', {'form': form, 'note': note})
