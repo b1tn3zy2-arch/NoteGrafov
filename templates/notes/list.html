@@ -7,6 +7,7 @@
 </head>
 <body class="container mt-5">
     <h1>Мои заметки</h1>
+    <a href="{% url 'note_create' %}" class="btn btn-primary mb-3">Создать заметку</a>
 
     {% for note in notes %}
         <div class="card mb-2">
